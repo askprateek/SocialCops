@@ -1,7 +1,7 @@
 import React from 'react';
 import * as ReactD3 from 'react-d3-components';
 
-export default class Data extends React.Component{
+export default class Piechart extends React.Component{
   constructor(){
     super();
     const chartData = require('dsv!../../data/sachin.csv');
@@ -30,10 +30,9 @@ export default class Data extends React.Component{
     var colorScale = d3.scale.ordinal()
       .domain(["Win", "Lost", "Tied"])
       .range(["#72A0C1", "#A4C639" , "#FFAB40"]);
-    console.log(colorScale);
+    // console.log(colorScale);
 
     return (
-      <div class="row">
       <div class="col s12 m6 center-align">
         <h4 className= "thin">Match Results when Sachin Played for India</h4>
         <PieChart
@@ -46,7 +45,6 @@ export default class Data extends React.Component{
             sort={sort}
           />
           </div>
-      </div>
     );
   }
 }
