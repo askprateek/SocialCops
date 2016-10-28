@@ -22,7 +22,7 @@ export default class Barchart extends React.Component{
 
       }
     }
-}
+    }
 
   render() {
     const PieChart = ReactD3.PieChart;
@@ -30,26 +30,41 @@ export default class Barchart extends React.Component{
       label: 'Chart 2',
       values: []
     };
+    var dataset =[0,0,0,0,0,0]; var tempvalues=[];
+    var yearset=[1988];
+    var count =0;
+    var limit =0;
+    for (var key in this.state){
+      dataset[count]+=this.state[key];
+      limit++;
+      if (limit==4){
+        limit=0;
+        yearset.push(key);
+        count++;
+      }
+    }
+    console.log(dataset,yearset);
+
     var key = Object.keys(this.state);
-    for ( var i=0; i < key.length; i++){
+    for ( var i=0; i < yearset.length; i++){
       var temp={ };
-      temp['y']=this.state[key[i]];
-      temp['x']=key[i];
+      temp['y']=dataset[i];
+      temp['x']=parseInt(yearset[i])+1 +" to "+ yearset[i+1];
 
       data.values[i]=temp;
     }
-    var sort = null; 
+    var sort = null;
     var tooltipPie = function(x,y) {
-      return "Matches " + x + " = " + y;
+      return "Runs Scored from Year " + x + " = " + y;
     };
 
     return (
       <div class="col s12 center-align">
-        <h4 className= "thin">Run Scored from 1990-2012</h4>
+        <h4 className= "thin">Run Scored from 1989-2012</h4>
         <PieChart
             data={data}
-            width={1000}
-            height={800}
+            width={600}
+            height={500}
             tooltipHtml={tooltipPie}
             margin={{top: 10, bottom: 10, left: -50, right: 10}}
             sort={sort}

@@ -25,6 +25,8 @@ p{
   position: fixed;
   color:white;
 
+  line-height: 1;
+
 }
 img {
   max-width: 100%;

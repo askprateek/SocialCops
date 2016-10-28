@@ -39,7 +39,7 @@ export default class Piechart extends React.Component{
             data={data}
             colorScale={colorScale}
             width={600}
-            height={400}
+            height={500}
             tooltipHtml={tooltipPie}
             margin={{top: 10, bottom: 10, left: -50, right: 10}}
             sort={sort}
