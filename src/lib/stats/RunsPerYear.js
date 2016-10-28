@@ -1,6 +1,6 @@
 import React from 'react';
 import * as ReactD3 from 'react-d3-components';
-import Piechart from './Pie';
+import Piechart from '../charts/Pie';
 
 export default class RunsPerYear extends React.Component{
   constructor(){

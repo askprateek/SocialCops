@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from './Header';
-import Body from './Body';
 import { Link } from 'react-router';
 
 class Layout extends React.Component {
@@ -8,6 +6,7 @@ class Layout extends React.Component {
       return (
         <div>
           <div>
+            <Link to='/'><button class="btn blue">Home</button></Link>
             <Link to='match-status'><button class="btn red">Matches Won/Lost/Tied</button></Link>
             <Link to='runs-per-year'><button class="btn red">Run Scored</button></Link>
           </div>

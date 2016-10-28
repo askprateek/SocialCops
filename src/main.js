@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Layout from './lib/Layout'
-import MatchStatus from './lib/charts/MatchStatus';
-import RunsPerYear from './lib/charts/RunsPerYear';
+import MatchStatus from './lib/stats/MatchStatus';
+import RunsPerYear from './lib/stats/RunsPerYear';
 
 import * as ReactD3 from 'react-d3-components';
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
