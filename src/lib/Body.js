@@ -12,14 +12,9 @@ export default class Body extends React.Component {
 
     return (
       <div className='container'>
-        <input onChange = {this.handleChange.bind(this)} />
-        <h1 className='thin'>Hello,my name is {this.props.body_text}</h1>
         <div className="row">
           <Piechart />
         </div>
-        <div className="row">
-          <Barchart />
-          </div>
       </div>
     );
   }

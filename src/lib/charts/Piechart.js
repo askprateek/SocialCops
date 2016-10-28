@@ -23,7 +23,7 @@ export default class Piechart extends React.Component{
       values: [{x: 'Win', y: this.state['won']}, {x: 'Lost', y: this.state['lost']}, {x: 'Tied', y: this.state['tied']}]
     };
 
-    var sort = null; 
+    var sort = null;
     var tooltipPie = function(x,y) {
       return "Matches " + x + " = " + y;
     };
@@ -33,7 +33,7 @@ export default class Piechart extends React.Component{
 
 
     return (
-      <div class="col s12 m6 center-align">
+      <div id="image" class="col s12 center-align">
         <h4 className= "thin">Match Results when Sachin Played for India</h4>
         <PieChart
             data={data}

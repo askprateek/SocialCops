@@ -1,19 +1,19 @@
 import React from 'react';
 import Header from './Header';
 import Body from './Body';
+import { Link } from 'react-router';
 
 class Layout extends React.Component {
-  constructor(){
-    super();
-    this.state = {body_text: ""};
-  }
-  changeContent(body_text){
-    this.setState( {body_text});
-  }
    render() {
       return (
         <div>
-          <Body changeContent= {this.changeContent.bind(this)} body_text={this.state.body_text}/>
+          <div>
+            <Link to='barchart'><button class="btn red">Matches Won/Lost/Tied</button></Link>
+            <Link to='piechart'><button class="btn red">Run Scored</button></Link>
+          </div>
+          <div>
+              {this.props.children}
+          </div>
         </div>
       );
    }
