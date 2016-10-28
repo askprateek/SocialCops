@@ -22,12 +22,7 @@ export default class Barchart extends React.Component{
 
       }
     }
-
-
-    // console.log(generalize_data);
 }
-
-
 
   render() {
     const PieChart = ReactD3.PieChart;
@@ -43,14 +38,13 @@ export default class Barchart extends React.Component{
 
       data.values[i]=temp;
     }
-    // console.log(dataset);
-    var sort = d3.ascending; // d3.ascending, d3.descending, func(a,b) { return a - b; }, etc...
+    var sort = null; 
     var tooltipPie = function(x,y) {
       return "Matches " + x + " = " + y;
     };
 
     return (
-      <div class="col s12center-align">
+      <div class="col s12 center-align">
         <h4 className= "thin">Run Scored from 1990-2012</h4>
         <PieChart
             data={data}

@@ -13,7 +13,6 @@ class Layout extends React.Component {
    render() {
       return (
         <div>
-          <Header />
           <Body changeContent= {this.changeContent.bind(this)} body_text={this.state.body_text}/>
         </div>
       );

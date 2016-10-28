@@ -23,14 +23,14 @@ export default class Piechart extends React.Component{
       values: [{x: 'Win', y: this.state['won']}, {x: 'Lost', y: this.state['lost']}, {x: 'Tied', y: this.state['tied']}]
     };
 
-    var sort = null; // d3.ascending, d3.descending, func(a,b) { return a - b; }, etc...
+    var sort = null; 
     var tooltipPie = function(x,y) {
       return "Matches " + x + " = " + y;
     };
     var colorScale = d3.scale.ordinal()
       .domain(["Win", "Lost", "Tied"])
       .range(["#72A0C1", "#A4C639" , "#FFAB40"]);
-    // console.log(colorScale);
+
 
     return (
       <div class="col s12 m6 center-align">
