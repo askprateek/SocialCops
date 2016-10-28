@@ -8,7 +8,7 @@ export default class Piechart extends React.Component{
       console.log(this.props);
       return (
         <div id="image" class="col s12 center-align">
-          <h4 className= "thin">Match Results when Sachin Played for India</h4>
+          <h4 className= "thin">{this.props.title}</h4>
           <PieChart
               data={this.props.data}
               colorScale={this.props.colorScale}
