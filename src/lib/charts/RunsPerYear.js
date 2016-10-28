@@ -1,7 +1,8 @@
 import React from 'react';
 import * as ReactD3 from 'react-d3-components';
+import Piechart from './Pie';
 
-export default class Barchart extends React.Component{
+export default class RunsPerYear extends React.Component{
   constructor(){
     super();
     const chartData = require('dsv!../../data/sachin.csv');
@@ -31,9 +32,7 @@ export default class Barchart extends React.Component{
       values: []
     };
     var dataset =[0,0,0,0,0,0]; var tempvalues=[];
-    var yearset=[1988];
-    var count =0;
-    var limit =0;
+    var yearset=[1988]; var count =0; var limit =0;
     for (var key in this.state){
       dataset[count]+=this.state[key];
       limit++;
@@ -43,7 +42,7 @@ export default class Barchart extends React.Component{
         count++;
       }
     }
-    console.log(dataset,yearset);
+    // console.log(dataset,yearset);
 
     var key = Object.keys(this.state);
     for ( var i=0; i < yearset.length; i++){
@@ -54,22 +53,13 @@ export default class Barchart extends React.Component{
       data.values[i]=temp;
     }
     var sort = null;
+    var colorScale = d3.scale.ordinal();
     var tooltipPie = function(x,y) {
       return "Runs Scored from Year " + x + " = " + y;
     };
 
     return (
-      <div class="col s12 center-align">
-        <h4 className= "thin">Run Scored from 1989-2012</h4>
-        <PieChart
-            data={data}
-            width={600}
-            height={500}
-            tooltipHtml={tooltipPie}
-            margin={{top: 10, bottom: 10, left: -50, right: 10}}
-            sort={sort}
-          />
-        </div>
+        <Piechart data = {data} tooltipPie={tooltipPie} sort={sort} />
     );
   }
 }

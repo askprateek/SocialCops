@@ -1,7 +1,8 @@
 import React from 'react';
 import * as ReactD3 from 'react-d3-components';
+import Piechart from './Pie';
 
-export default class Piechart extends React.Component{
+export default class MatchStatus extends React.Component{
   constructor(){
     super();
     const chartData = require('dsv!../../data/sachin.csv');
@@ -17,12 +18,12 @@ export default class Piechart extends React.Component{
   }
 
   render() {
-    const PieChart = ReactD3.PieChart;
-    const data = {
+
+    var data = {
       label: 'somethingA',
       values: [{x: 'Win', y: this.state['won']}, {x: 'Lost', y: this.state['lost']}, {x: 'Tied', y: this.state['tied']}]
     };
-
+    // <PiechartCom data={data} colorScale={colorScale} tooltipPie={tooltipPie} />
     var sort = null;
     var tooltipPie = function(x,y) {
       return "Matches " + x + " = " + y;
@@ -33,18 +34,7 @@ export default class Piechart extends React.Component{
 
 
     return (
-      <div id="image" class="col s12 center-align">
-        <h4 className= "thin">Match Results when Sachin Played for India</h4>
-        <PieChart
-            data={data}
-            colorScale={colorScale}
-            width={600}
-            height={500}
-            tooltipHtml={tooltipPie}
-            margin={{top: 10, bottom: 10, left: -50, right: 10}}
-            sort={sort}
-          />
-          </div>
+      <Piechart data = {data} colorScale={colorScale} tooltipPie={tooltipPie} sort={sort} />
     );
   }
 }

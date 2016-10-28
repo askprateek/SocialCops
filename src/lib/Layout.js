@@ -8,8 +8,8 @@ class Layout extends React.Component {
       return (
         <div>
           <div>
-            <Link to='barchart'><button class="btn red">Matches Won/Lost/Tied</button></Link>
-            <Link to='piechart'><button class="btn red">Run Scored</button></Link>
+            <Link to='match-status'><button class="btn red">Matches Won/Lost/Tied</button></Link>
+            <Link to='runs-per-year'><button class="btn red">Run Scored</button></Link>
           </div>
           <div>
               {this.props.children}
