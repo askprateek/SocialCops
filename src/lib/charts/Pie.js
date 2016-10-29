@@ -7,12 +7,12 @@ export default class Piechart extends React.Component{
       const PieChart = ReactD3.PieChart;
       console.log(this.props);
       return (
-        <div id="image" class="col s12 center-align">
-          <h4 className= "thin">{this.props.title}</h4>
+        <div class="col s12 center-align">
+          <h4 class= "thin">{this.props.data.label}</h4>
           <PieChart
               data={this.props.data}
               colorScale={this.props.colorScale}
-              width={600}
+              width={700}
               height={500}
               tooltipHtml={this.props.tooltipPie}
               margin={{top: 10, bottom: 10, left: -50, right: 10}}

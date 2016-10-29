@@ -28,7 +28,7 @@ export default class RunsPerYear extends React.Component{
   render() {
     const PieChart = ReactD3.PieChart;
     var data = {
-      label: 'Chart 2',
+      label: 'Total Runs scored in span of every 4 year',
       values: []
     };
     var dataset =[0,0,0,0,0,0]; var tempvalues=[];
@@ -52,7 +52,6 @@ export default class RunsPerYear extends React.Component{
 
       data.values[i]=temp;
     }
-    var title='Totol Runs scored in span of every 4 year';
     var sort = null;
     var colorScale = d3.scale.ordinal();
     var tooltipPie = function(x,y) {
@@ -60,7 +59,7 @@ export default class RunsPerYear extends React.Component{
     };
 
     return (
-        <Piechart title = {title} data = {data} tooltipPie={tooltipPie} sort={sort} />
+        <Piechart data = {data} tooltipPie={tooltipPie} sort={sort} />
     );
   }
 }

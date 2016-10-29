@@ -20,10 +20,9 @@ export default class MatchStatus extends React.Component{
   render() {
 
     var data = {
-      label: 'somethingA',
+      label: 'No. of Matches Win/Lost/Tied when Sachin Played',
       values: [{x: 'Win', y: this.state['won']}, {x: 'Lost', y: this.state['lost']}, {x: 'Tied', y: this.state['tied']}]
     };
-    var title='No. of Matches Win/Lost/Tied when Sachin Played';
     var sort = null;
     var tooltipPie = function(x,y) {
       return "Matches " + x + " = " + y;
@@ -34,7 +33,7 @@ export default class MatchStatus extends React.Component{
 
 
     return (
-      <Piechart title={title} data = {data} colorScale={colorScale} tooltipPie={tooltipPie} sort={sort} />
+      <Piechart data = {data} colorScale={colorScale} tooltipPie={tooltipPie} sort={sort} />
     );
   }
 }
