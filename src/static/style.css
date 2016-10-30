@@ -32,3 +32,6 @@ img {
   max-width: 100%;
   border: 3px solid white;
 }
+.x text{
+  transform: rotate(-90deg);
+}

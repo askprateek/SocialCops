@@ -26,7 +26,6 @@ export default class RunsPerYear extends React.Component{
     }
 
   render() {
-    const PieChart = ReactD3.PieChart;
     var data = {
       label: 'Total Runs scored in span of every 4 year',
       values: []
