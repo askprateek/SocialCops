@@ -44,7 +44,7 @@ export default class RunsPerYear extends React.Component{
     // console.log(dataset,yearset);
 
     var key = Object.keys(this.state);
-    for ( var i=0; i < yearset.length; i++){
+    for ( var i=0; i < yearset.length-1; i++){
       var temp={ };
       temp['y']=dataset[i];
       temp['x']=parseInt(yearset[i])+1 +" to "+ yearset[i+1];
