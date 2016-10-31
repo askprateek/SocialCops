@@ -5,7 +5,7 @@ export default class Piechart extends React.Component{
 
     render() {
       const PieChart = ReactD3.PieChart;
-      console.log(this.props);
+      // console.log(this.props);
       return (
         <div class="row">
         <div class="col s12 center-align">

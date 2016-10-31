@@ -9,7 +9,7 @@ export default class PerformanceAgaintsTeams extends React.Component{
 
   }
   changeTeam(el){
-    console.log(el.target.value);
+    // console.log(el.target.value);
     var team = el.target.value.toString();
     this.setState({team});
   }
@@ -54,7 +54,7 @@ export default class PerformanceAgaintsTeams extends React.Component{
         }
 
       }
-      console.log(data[0].total, data[0].century, data[0].fifty);
+      // console.log(data[0].total, data[0].century, data[0].fifty);
       allTeams=allTeams.filter(function(item, i, ar){ return ar.indexOf(item) === i; });
       const select = allTeams.map(function(allTeams,id){
         return <option key={id}
