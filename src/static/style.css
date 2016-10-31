@@ -10,6 +10,7 @@ html{
 
 .content,.sidebar{
   padding: 20px;
+  padding-bottom: 0px;
 }
 
 .content{
@@ -33,5 +34,8 @@ img {
   border: 3px solid white;
 }
 .x text{
-  transform: rotate(-90deg);
+  display:none;
+}
+select {
+  display:inline;
 }

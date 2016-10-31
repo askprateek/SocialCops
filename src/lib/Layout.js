@@ -17,7 +17,7 @@ class Layout extends React.Component {
                   <Link to='/'><button class="btn blue">Home</button></Link>
                   <Link to='match-status'><button class="btn red">Matches Won/Lost/Tied</button></Link>
                   <Link to='runs-per-year'><button class="btn red">Run Scored</button></Link>
-                  <Link to='test'><button class="btn red">Bar Chart</button></Link>
+                  <Link to='performance-againts'><button class="btn red">Performance Against Various Teams</button></Link>
                   </div>
                   <div>
                     {this.props.children}
