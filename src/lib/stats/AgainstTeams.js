@@ -62,13 +62,24 @@ export default class PerformanceAgaintsTeams extends React.Component{
       });
     return (
       <div>
-      <div>
+      <div class="row">
+        <div class="col s12 center align">
+          <h3 class='thin'> Analyse Performance of Sachin against various Teams </h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s12">
+        <GroupedBar data={data} tooltipbar = {tooltipbar} />
+        </div>
+        </div>
+
+      <div class="row">
+      <div class="col s12 m4 offset-m3 input-field">
         <select defaultvalue={this.state.team} onChange={this.changeTeam.bind(this)}>
           { select }
         </select>
-      </div>
-      <div>
-        <GroupedBar data={data} tooltipbar = {tooltipbar} />
+        </div>
       </div>
       </div>
     );
