@@ -5,7 +5,7 @@ export default class Content extends React.Component{
     return (
 
 
-        <div class="row content">
+        <div class="row">
           <p><b>Sachin Ramesh Tendulkar</b> is a former Indian cricketer and captain,
             <b>widely regarded as the greatest batsman of all time</b>. He took up cricket at the age of eleven,
             made his Test debut on 15 November 1989 against Pakistan in Karachi at the age of sixteen,

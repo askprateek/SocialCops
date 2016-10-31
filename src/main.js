@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import Layout from './lib/Layout'
+import Content from './lib/pages/Content';
 import MatchStatus from './lib/stats/MatchStatus';
 import RunsPerYear from './lib/stats/RunsPerYear';
 import PerformanceAgaintsTeams from './lib/stats/AgainstTeams';
@@ -12,9 +13,10 @@ const app_root = document.getElementById('root');
 ReactDOM.render(
     <Router history={hashHistory}>
       <Route path='/' component = { Layout }>
+        <IndexRoute component={Content}></IndexRoute>
         <Route path="match-status" component={ MatchStatus }></Route>
         <Route path="runs-per-year" component={ RunsPerYear }></Route>
-        <Route path="performance-againts" component= { PerformanceAgaintsTeams } ></Route>
+        <Route path="performance-against" component= { PerformanceAgaintsTeams } ></Route>
       </Route>
     </Router>,
   app_root);

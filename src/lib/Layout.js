@@ -7,24 +7,31 @@ class Layout extends React.Component {
    render() {
       return (
         <div class="row">
-        <div class="col s12 m3">
+        <div class="col s12 l3">
             <Sidebar />
           </div>
-          <div class="col s12 m8">
-              <Content />
-              <div>
-                <div>
-                  <Link to='/'><button class="btn blue">Home</button></Link>
-                  <Link to='match-status'><button class="btn red">Matches Won/Lost/Tied</button></Link>
-                  <Link to='runs-per-year'><button class="btn red">Run Scored</button></Link>
-                  <Link to='performance-againts'><button class="btn red">Performance Against Various Teams</button></Link>
-                  </div>
-                  <div>
-                    {this.props.children}
-                  </div>
-              </div>
+          <div class="col s12 l9 content ">
+          <div class="row">
+          <div class="col s12">
+          <nav class="black">
+          <div class="nav-wrapper">
+              <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><Link to='/'>Home</Link></li>
+                <li><Link to='match-status'>Matches Won/Lost/Tied</Link></li>
+                <li><Link to='runs-per-year'>Run Scored</Link></li>
+                <li><Link to='performance-against'>Performance Against Various Teams</Link></li>
+              </ul>
+            </div>
+          </nav>
+          </div>
           </div>
 
+                  <div class="row">
+                    <div class=" col s12">
+                    {this.props.children}
+                    </div>
+                  </div>
+          </div>
         </div>
       );
    }
