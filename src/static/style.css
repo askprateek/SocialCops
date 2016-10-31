@@ -29,9 +29,10 @@ p{
 }
 nav{
   box-shadow: none;
+  border-radius: 5px;
 }
 
-#nav-mobile li a{
+nav ul a{
   font-size:20px;
 }
 nav ul a:hover{

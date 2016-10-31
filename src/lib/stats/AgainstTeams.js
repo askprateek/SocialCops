@@ -27,15 +27,18 @@ export default class PerformanceAgaintsTeams extends React.Component{
         century: 0
       }];
       var y = d3.scale.linear().range[0,400];
-      var allTeams=[];
+      var allTeams=[],bat_score;
       var tooltipbar =function(x,y0,y){
         return 'Scored '+ y + status + ' on ' + x ;
       }
       for (var i =0 ; i<chartData.length; i++){
           allTeams.push(chartData[i].opposition);
-        if ( chartData[i].opposition==this.state.team ){
+          bat_score = chartData[i].batting_score;
+          bat_score = parseInt(bat_score.replace('*',''));
+
+        if ( chartData[i].opposition==this.state.team && !isNaN(bat_score) ){
           var day = chartData[i].date;
-          var score = chartData[i].batting_score;
+          var score = parseInt(bat_score);
           if (isNaN(score) && score.substr(-1)=='*'){
             // console.log(score.substr(0,score.length-1));
             var temp = {x: day + ' - Not Out', y : parseInt(score.substr(0,score.length-1))}
@@ -64,7 +67,7 @@ export default class PerformanceAgaintsTeams extends React.Component{
       <div>
       <div class="row">
         <div class="col s12 center align">
-          <h3 class='thin'> Analyse Performance of Sachin against various Teams </h3>
+          <h3 class='thin'>Performance Analysis of Sachin against various Teams </h3>
         </div>
       </div>
 

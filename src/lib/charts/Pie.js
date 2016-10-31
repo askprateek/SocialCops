@@ -13,7 +13,7 @@ export default class Piechart extends React.Component{
           <PieChart
               data={this.props.data}
               colorScale={this.props.colorScale}
-              width={700}
+              width={800}
               height={500}
               tooltipHtml={this.props.tooltipPie}
               margin={{top: 10, bottom: 10, left: -50, right: 10}}
