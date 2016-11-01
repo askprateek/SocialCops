@@ -63,6 +63,8 @@ export default class PerformanceAgaintsTeams extends React.Component{
         return <option key={id}
                   value = {allTeams}>{allTeams}</option>;
       });
+      var text = `Sachin has scored total of ${data[0].total} runs againts ${data[0].label.substr(2)}. In ${data[0].century} matches he scored a Century and
+            in ${data[0].fifty} matches he scored more than 50 runs.`;
     return (
       <div>
       <div class="row">
@@ -73,7 +75,7 @@ export default class PerformanceAgaintsTeams extends React.Component{
 
       <div class="row">
         <div class="col s12">
-        <GroupedBar data={data} tooltipbar = {tooltipbar} />
+        <GroupedBar data={data} tooltipbar = {tooltipbar} text={text}/>
         </div>
         </div>
 

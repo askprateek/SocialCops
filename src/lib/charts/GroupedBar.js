@@ -12,17 +12,18 @@ export default class GroupedBar extends React.Component{
         <BarChart
           data={this.props.data}
           width={1200}
-          height={500}
+          height={400}
           tooltipHtml={this.props.tooltipbar}
           margin={{top: 10, bottom: 5, left: 50, right: 10}} />
         </div>
         </div>
         <div class="row">
         <div class="col s12">
-          <p>Sachin has scored total of {this.props.data[0].total} runs againts {this.props.data[0].label.substr(2)}. In {this.props.data[0].century} matches he scored a Century and
-              in {this.props.data[0].fifty} matches he scored more than 50 runs.</p>
-          </div>
-        </div>
+        <p>
+          {this.props.text}
+          </p>
+      </div>
+    </div>
         </div>
     );
   }

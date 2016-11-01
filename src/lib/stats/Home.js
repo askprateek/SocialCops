@@ -71,7 +71,6 @@ export default class Home extends React.Component{
       data : data,
       tooltipHome : tooltipHome
     }
-
   }
 
   render(){
