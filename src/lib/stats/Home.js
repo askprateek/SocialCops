@@ -1,5 +1,5 @@
 import React from 'react';
-import GroupedBar from '../charts/GroupedBar';
+import AreaChart from '../charts/Area';
 
 export default class Home extends React.Component{
   constructor(){
@@ -89,19 +89,18 @@ export default class Home extends React.Component{
           the holder of the record for the number of runs in both ODI and Test cricket,
           and the only player to complete more than 30,000 runs in international cricket.
           </p>
-        </div>
-        </div>
 
-        <div class="row">
-          <div class="col s12">
             <p>According to the ODI data we have, Sachin made {this.state.total_runs} runs with an average of {this.state.avg} in his career. He scored Century in {this.state.century} innings and Fifties in {this.state.fifties} innings.
               He played {this.state.eighty} innings in which he score between 80-100. He also took {this.state.wickets} wickets in his One Day career.
             </p>
           </div>
         </div>
         <div class="row">
-          <div class="col s12">
-            <GroupedBar data = {this.state.data} tooltipbar = {this.state.tooltipHome} />
+          <div class="col s12 center-align">
+            <AreaChart data = {this.state.data} />
+
+            <h4 class= 'thin'>Yearly average of Sachin </h4>
+        
             </div>
         </div>
         </div>

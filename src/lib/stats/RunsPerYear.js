@@ -51,6 +51,7 @@ export default class RunsPerYear extends React.Component{
 
       data.values[i]=temp;
     }
+    var width = 800;
     var sort = null;
     var colorScale = d3.scale.ordinal();
     var tooltipPie = function(x,y) {
@@ -58,7 +59,11 @@ export default class RunsPerYear extends React.Component{
     };
 
     return (
-        <Piechart data = {data} tooltipPie={tooltipPie} sort={sort} />
+      <div class="row">
+      <div class="col s12 center-align">
+        <Piechart data = {data} tooltipPie={tooltipPie} sort={sort} width={width} />
+        </div>
+        </div>
     );
   }
 }
