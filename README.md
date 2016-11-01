@@ -22,3 +22,5 @@ Things to Learn
 
 * Build Charts without using React-D3-Component Library
 * Interating Frontend with Django backend
+
+**Note:** Charts aren't responsive. Page designing has been done on screen with resolution of 1920*1080.
