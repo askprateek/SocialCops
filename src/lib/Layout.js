@@ -20,6 +20,7 @@ class Layout extends React.Component {
                 <li><Link to='match-status'>Matches Won/Lost/Tied</Link></li>
                 <li><Link to='runs-per-year'>Run Scored</Link></li>
                 <li><Link to='performance-against'>Performance Against Various Teams</Link></li>
+                <li><Link to='final-verdict'>Final Verdict</Link></li>
               </ul>
             </div>
           </nav>

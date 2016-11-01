@@ -5,6 +5,7 @@ import Content from './lib/pages/Content';
 import MatchStatus from './lib/stats/MatchStatus';
 import RunsPerYear from './lib/stats/RunsPerYear';
 import PerformanceAgaintsTeams from './lib/stats/AgainstTeams';
+import FinalVerdict from './lib/stats/FinalVerdict';
 
 import { Router, Route, IndexRoute, hashHistory } from 'react-router';
 
@@ -17,6 +18,7 @@ ReactDOM.render(
         <Route path="match-status" component={ MatchStatus }></Route>
         <Route path="runs-per-year" component={ RunsPerYear }></Route>
         <Route path="performance-against" component= { PerformanceAgaintsTeams } ></Route>
+        <Route path="final-verdict" component={ FinalVerdict }></Route>
       </Route>
     </Router>,
   app_root);
