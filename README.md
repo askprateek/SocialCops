@@ -7,7 +7,7 @@ Used ReactJS and D3 for Visualizing data.
 npm install
 npm start
 ```
-For Completing this challenge I leared Two new technologies from scracth i.e ReactJs and D3.js.
+For Completing this challenge I leared Two new technologies from scratch i.e ReactJs and D3.js.
 
 Things I leared while working on this.
 
