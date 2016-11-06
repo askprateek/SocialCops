@@ -27,11 +27,11 @@ p{
   line-height: 1;
 
 }
-nav{
+nav, nav ul{
   box-shadow: none;
+  background: black;
   border-radius: 5px;
 }
-
 nav ul a{
   font-size:20px;
 }
