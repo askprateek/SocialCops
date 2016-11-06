@@ -4,6 +4,10 @@ export default class sidebar extends React.Component{
 
   render(){
     return (
+      <div>
+
+      <ul id="slide-out" class="side-nav fixed">
+
       <div class="row sidebar">
         <div class="col s12">
           <img src ="http://2.bp.blogspot.com/-Z8KFf0X2Pfk/UoinDbQ0oRI/AAAAAAAAS6M/QA3CJ0NVfks/s1600/+Sachin+Tendulkar+HD+Photos+(5).jpg"></img>
@@ -26,6 +30,8 @@ export default class sidebar extends React.Component{
             <p>Tendlya, <br></br> Little Master,<br></br> Master Blaster</p>
           </div>
         </div>
+      </div>
+      </ul>
       </div>
     );
   }

@@ -42,6 +42,10 @@ nav ul a:hover{
   outline : solid;
   outline-offset: -3px;
 }
+.side-nav{
+  width:25vw;
+}
+
 img {
   max-width: 100%;
   border: 3px solid white;
