@@ -25,6 +25,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "test": "webpack-dev-server --content-base src --inline --hot",
     "start": "webpack-dev-server --content-base src --inline --hot"
   },
   "author": "",
